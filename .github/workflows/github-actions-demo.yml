@@ -15,4 +15,7 @@ jobs:
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
+      - name: run checker
+        run: |
+          java -jar ci-cd-check.jar remote
       - run: echo "🍏 This job's status is ${{ job.status }}."
